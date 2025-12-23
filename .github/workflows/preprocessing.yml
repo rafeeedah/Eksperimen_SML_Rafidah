@@ -26,10 +26,10 @@ jobs:
 
       - name: Run preprocessing pipeline
         run: |
-          python preprocessing/automate_Raf.py
+          python preprocessing/automate_Rafidah.py
 
       - name: Upload processed dataset
         uses: actions/upload-artifact@v4
         with:
           name: processed-dataset
-          path: preprocessing/namadataset_preprocessing/
+          path: preprocessing/german_credit_data_preprocessing/
