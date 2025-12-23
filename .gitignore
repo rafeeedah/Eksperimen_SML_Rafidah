@@ -2,5 +2,3 @@ __pycache__/
 .env
 mlruns/
 .ipynb_checkpoints/
-*.pkl
-*.joblib
