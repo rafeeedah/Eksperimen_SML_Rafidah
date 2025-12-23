@@ -10,8 +10,8 @@ import joblib
 # =========================
 # CONFIG
 # =========================
-RAW_DATA_PATH = "Eksperimen_SML_Rafidah/german_credit_data.csv"
-OUTPUT_DIR = "Eksperimen_SML_Rafidah/preprocessing/german_credit_data_preprocessing"
+RAW_DATA_PATH = "german_credit_data.csv"
+OUTPUT_DIR = "preprocessing/german_credit_data_preprocessing"
 RANDOM_STATE = 88
 TEST_SIZE = 0.2
 
