@@ -78,6 +78,13 @@ def build_preprocessor() -> ColumnTransformer:
 
     return preprocessor
 
+# =========================
+# TARGET PREPROCESSING
+# =========================
+def preprocess_target(y: pd.Series) -> pd.Series:
+    y_processed = y.map({"good": 1, "bad": 0})
+    return y_processed
+
 
 # =========================
 # MAIN PIPELINE
@@ -85,6 +92,8 @@ def build_preprocessor() -> ColumnTransformer:
 def preprocess_and_split(df: pd.DataFrame):
     X = df.drop(columns=[TARGET_COL])
     y = df[TARGET_COL]
+
+    y = preprocess_target(y)
 
     X_train, X_test, y_train, y_test = train_test_split(
         X,
